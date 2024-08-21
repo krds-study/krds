@@ -1,5 +1,5 @@
 {
-  "name": "krds",
+  "name": "krds-prac",
   "private": true,
   "scripts": {
     "build": "turbo build",

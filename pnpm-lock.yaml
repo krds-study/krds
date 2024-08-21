@@ -50,10 +50,10 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
-      '@repo/eslint-config':
+      '@krds-prac/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@repo/typescript-config':
+      '@krds-prac/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@turbo/gen':
