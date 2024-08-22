@@ -36,6 +36,12 @@ importers:
       '@eslint/js':
         specifier: ^9.9.0
         version: 9.9.0
+      '@krds-prac/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint-config
+      '@krds-prac/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
       '@storybook/addon-essentials':
         specifier: ^8.2.9
         version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.4(@babel/core@7.25.2)))
