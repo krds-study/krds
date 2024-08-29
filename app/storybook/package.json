@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@krds-prac/ui": "workspace:*",
+    "@krds-prac/styled-system": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
