@@ -1,4 +1,4 @@
-import { Button } from "../../../../packages/ui/src/Button"
+import { Button } from "@krds-prac/ui"
 
 import type { Meta, StoryObj } from "@storybook/react"
 export default {
@@ -11,5 +11,7 @@ export default {
 type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    className: "test",
+  },
 }
