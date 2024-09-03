@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "build": "rollup -c"
+    "build": "rollup -c -w"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
