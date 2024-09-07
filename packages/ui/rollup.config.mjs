@@ -35,6 +35,7 @@ export default defineConfig([
         entryFileNames: "[name].mjs",
       },
     ],
+    external: [/@babel\/runtime/],
     plugins: [
       peerDepsExternal(),
       resolve(),

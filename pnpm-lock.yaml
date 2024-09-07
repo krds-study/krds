@@ -20,9 +20,6 @@ importers:
 
   app/storybook:
     dependencies:
-      '@krds-prac/styled-system':
-        specifier: workspace:*
-        version: link:../../packages/styled-system
       '@krds-prac/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -142,6 +139,12 @@ importers:
 
   packages/ui:
     dependencies:
+      '@babel/runtime':
+        specifier: ^7.25.6
+        version: 7.25.6
+      '@krds-prac/styled-system':
+        specifier: workspace:*
+        version: link:../styled-system
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -870,6 +873,10 @@ packages:
 
   '@babel/runtime@7.23.2':
     resolution: {integrity: sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.25.6':
+    resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.0':
@@ -7196,6 +7203,10 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.0
 
+  '@babel/runtime@7.25.6':
+    dependencies:
+      regenerator-runtime: 0.14.0
+
   '@babel/template@7.25.0':
     dependencies:
       '@babel/code-frame': 7.24.7
@@ -12677,7 +12688,7 @@ snapshots:
 
   regenerator-transform@0.15.2:
     dependencies:
-      '@babel/runtime': 7.23.2
+      '@babel/runtime': 7.25.6
 
   regexp-tree@0.1.27: {}
 
