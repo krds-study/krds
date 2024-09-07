@@ -2,31 +2,31 @@
   "name": "@krds-prac/styled-system",
   "exports": {
     "./css": {
-      "types": "./css/index.d.ts",
-      "require": "./css/index.mjs",
-      "import": "./css/index.mjs"
+      "types": "./generated/css/index.d.ts",
+      "require": "./generated/css/index.mjs",
+      "import": "./generated/css/index.mjs"
     },
     "./cx": {
-      "types": "./css/cx.d.ts",
-      "require": "./css/cx.mjs",
-      "import": "./css/cx.mjs"
+      "types": "./generated/css/cx.d.ts",
+      "require": "./generated/css/cx.mjs",
+      "import": "./generated/css/cx.mjs"
     },
     "./recipes": {
-      "types": "./recipes/index.d.ts",
-      "require": "./recipes/index.mjs",
-      "import": "./recipes/index.mjs"
+      "types": "./generated/recipes/index.d.ts",
+      "require": "./generated/recipes/index.mjs",
+      "import": "./generated/recipes/index.mjs"
     },
     "./tokens": {
-      "types": "./tokens/index.d.ts",
-      "require": "./tokens/index.mjs",
-      "import": "./tokens/index.mjs"
+      "types": "./generated/tokens/index.d.ts",
+      "require": "./generated/tokens/index.mjs",
+      "import": "./generated/tokens/index.mjs"
     },
     "./types": {
-      "types": "./types/index.d.ts"
+      "types": "./generated/types/index.d.ts"
     },
     "./types/composition": {
-      "types": "./types/composition.d.ts"
+      "types": "./generated/types/composition.d.ts"
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./generated/styles.css"
   }
 }

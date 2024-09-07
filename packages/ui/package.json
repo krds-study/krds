@@ -10,12 +10,17 @@
       "types": "./dist/types/index.d.ts",
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.mjs"
-    }
+    },
+    "./css": "./dist/styles.css"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "build": "rollup -c -w"
+    "build": "rollup -c",
+    "dev": "pnpm panda --watch",
+    "codegen": "pnpm panda codegen",
+    "release": "pnpm run codegen --clean && pnpm panda cssgen -o dist/styles.css && pnpm run start-dev",
+    "start-dev": "concurrently \"rollup -c -w\" \"pnpm run dev\""
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -32,16 +37,19 @@
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "rollup": "^4.21.2",
     "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
     "rollup-plugin-visualizer": "^5.12.0",
-    "typescript": "^5.3.3",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.25.6",
+    "@krds-prac/styled-system": "workspace:*",
     "react": "^18.2.0"
   }
 }

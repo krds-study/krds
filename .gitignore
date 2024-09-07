@@ -37,6 +37,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 
-styled-system
+styled-system/
 
 stats.html
+storybook-static

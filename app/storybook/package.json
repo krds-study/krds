@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "pnpx chromatic --project-token=chpt_e17e9e7a9807ab8"
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@krds-prac/ui": "workspace:*",
