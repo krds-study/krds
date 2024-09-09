@@ -3,5 +3,5 @@ export const config = {
   repo: "krds",
   dir: "packages/tokens",
   branch: "feature/top-233",
-  CommitMsg: "create of update design tokens",
+  CommitMsg: "create, update design tokens",
 };
