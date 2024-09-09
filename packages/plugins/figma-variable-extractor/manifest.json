@@ -1,17 +1,14 @@
 {
-  "name": "@krds/figma-variable-extractor",
+  "name": "@krds-prac/figma-variable-extractor",
   "id": "1414111965761530153",
   "api": "1.0.0",
-  "main": "code.js",
   "capabilities": [],
   "enableProposedApi": false,
   "documentAccess": "dynamic-page",
-  "editorType": [
-    "figma"
-  ],
+  "editorType": ["figma"],
+  "ui": "dist/ui.html",
+  "main": "dist/code.js",
   "networkAccess": {
-    "allowedDomains": [
-      "none"
-    ]
+    "allowedDomains": ["https://api.github.com"]
   }
 }
