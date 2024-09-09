@@ -8,8 +8,8 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
-    "@krds-prac/eslint-config": "workspace:*",
-    "@krds-prac/typescript-config": "workspace:*",
+    "@krds-prac/eslint-config": "*",
+    "@krds-prac/typescript-config": "*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/eslint": "^8.56.5",
