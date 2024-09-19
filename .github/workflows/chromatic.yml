@@ -3,8 +3,9 @@ name: "Chromatic UI Test"
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-    branches:
-      - "*"
+    branches: ["main"]
+    paths:
+      - app/storybook/src/**
 
 jobs:
   a11y-test:
