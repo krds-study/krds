@@ -1,5 +1,6 @@
-import { defineConfig } from "@pandacss/dev"
-import { buttonRecipe } from "./src/components/Button/style"
+import { defineConfig } from "@pandacss/dev";
+
+import { buttonRecipe } from "./src/components/Button/style";
 
 export default defineConfig({
   preflight: true,
@@ -27,4 +28,4 @@ export default defineConfig({
     },
   },
   jsxFramework: "react",
-})
+});

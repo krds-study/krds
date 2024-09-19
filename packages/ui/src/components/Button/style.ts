@@ -1,4 +1,4 @@
-import { defineRecipe } from "@pandacss/dev"
+import { defineRecipe } from "@pandacss/dev";
 export const buttonRecipe = defineRecipe({
   className: "button",
   base: {
@@ -77,4 +77,4 @@ export const buttonRecipe = defineRecipe({
     variant: "primary",
     br: "normal",
   },
-})
+});

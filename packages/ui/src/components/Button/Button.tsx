@@ -1,11 +1,16 @@
-import { ReactNode } from "react"
-import { button } from "@krds-prac/styled-system/recipes"
-interface ButtonProps {
-  children: ReactNode
-  className?: string
-  appName: string
-}
+import { button } from "@krds-prac/styled-system/recipes";
+import type { ReactNode } from "react";
 
-export const Button = ({ children }: ButtonProps) => {
-  return <button className={button()}>{children}</button>
+interface ButtonProps {
+  children: ReactNode;
+  className?: string;
+  appName: string;
+}
+export function Button({ children }: ButtonProps) {
+  return (
+    <button className={button()}>
+      sdfsdf
+      {children}
+    </button>
+  );
 }

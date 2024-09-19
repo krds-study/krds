@@ -10,6 +10,12 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "format": {
+      "dependsOn": ["^format"]
+    },
+    "type-check": {
+      "dependsOn": ["^type-check"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
