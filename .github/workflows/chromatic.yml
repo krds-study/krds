@@ -24,7 +24,7 @@ jobs:
             - recursive : true
 
       - name: Install Playwright
-        run: pnpm install playwright --save-dev
+        run: pnpm install playwright --save-dev -w
 
       - run: pnpm exec playwright install
 
