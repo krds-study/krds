@@ -24,12 +24,12 @@ jobs:
             - recursive : true
 
       - name: Install Playwright
-        run: pnpm ui install playwright --save-dev
+        run: pnpm install playwright --save-dev
 
-      - run: pnpm ui exec playwright install
+      - run: pnpm exec playwright install
 
       - name: Build Storybook
-        run: pnpm storybook build
+        run: turbo build
 
       - name: Serve Storybook and run tests
         run: |

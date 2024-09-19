@@ -19,11 +19,8 @@
     "generate:component": "turbo gen react-component",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "build": "rollup -c",
-    "dev": "pnpm panda --watch",
-    "codegen": "pnpm panda codegen",
-    "release": "pnpm run codegen --clean && pnpm panda cssgen -o dist/styles.css && pnpm run start-dev",
-    "start-dev": "concurrently \"rollup -c -w\" \"pnpm run dev\""
+    "build": "pnpm panda codegen --clean && pnpm panda cssgen -o ../styled-system/generated/styles.css && rollup -c",
+    "start-dev": "concurrently \"rollup -c -w\" \"pnpm panda --watch\""
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
