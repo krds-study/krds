@@ -7,6 +7,7 @@
     "lint": "eslint . --max-warnings 0 --fix",
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
+    "build-storybook": "storybook build",
     "test-storybook": "test-storybook"
   },
   "dependencies": {
