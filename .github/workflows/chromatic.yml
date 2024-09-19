@@ -48,13 +48,11 @@ jobs:
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build Storybook
         run: pnpm turbo build
-
-      - name: Install dependencies
-        run: pnpm install
-        working-directory: app/storybook
 
       - name: Run Chromatic
         uses: chromaui/action@latest
