@@ -29,12 +29,13 @@ jobs:
       - run: pnpm ui exec playwright install
 
       - name: Build Storybook
-        run: turbo build
+        run: pnpm storybook build
+
       - name: Serve Storybook and run tests
         run: |
           pnpx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "pnpx http-server ./packages/ui/storybook-static --port 6006" \
-            "pnpx wait-on http://127.0.0.1:6006 && pnpm ui test-storybook"
+            "pnpx http-server ./app/storybook/storybook-static --port 6006" \
+            "pnpx wait-on http://127.0.0.1:6006 && pnpm storybook test-storybook"
 
   chromatic:
     name: Run Chromatic
