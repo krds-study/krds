@@ -51,9 +51,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+        working-directory: app/storybook
 
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: packages/ui
+          workingDir: app/storybook
