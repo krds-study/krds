@@ -1,0 +1,62 @@
+name: "Chromatic UI Test"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: ["main"]
+    paths:
+      - app/storybook/src/**
+
+jobs:
+  a11y-test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: |
+            - recursive : true
+
+      - name: Install Playwright
+        run: pnpm ui install playwright --save-dev
+
+      - run: pnpm ui exec playwright install
+
+      - name: Build Storybook
+        run: pnpm turbo build
+
+      - name: Serve Storybook and run tests
+        run: |
+          pnpx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "pnpx http-server ./app/storybook/storybook-static --port 6006" \
+            "pnpx wait-on http://127.0.0.1:6006 && pnpm storybook test-storybook"
+
+  chromatic:
+    name: Run Chromatic
+    needs: a11y-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Storybook
+        run: pnpm turbo build
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: app/storybook

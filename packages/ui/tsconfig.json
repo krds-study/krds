@@ -1,8 +1,12 @@
 {
   "extends": "@krds-prac/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "declarationDir": "./build"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+
+  "exclude": ["node_modules", "dist", "panda.config.ts"]
 }
