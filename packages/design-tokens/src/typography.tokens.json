@@ -1,0 +1,594 @@
+{
+  "type_scale": {
+    "display": {
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "66px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "40px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "50px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "32px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "40px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      }
+    },
+    "heading": {
+      "Number": {
+        "$type": "FLOAT",
+        "$value": 0
+      },
+      "String": {
+        "$type": "STRING",
+        "$value": "String value"
+      },
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "50px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "40px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "40px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "32px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "32px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "1px"
+        }
+      }
+    },
+    "body": {
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      }
+    },
+    "title": {
+      "xxlarge": {
+        "size": {
+          "$type": "STRING",
+          "$value": "32px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "xlarge": {
+        "size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "21px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "xsmall": {
+        "size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "25px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "700"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      }
+    },
+    "detail": {
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "32px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      }
+    },
+    "label": {
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "xsmall": {
+        "size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      }
+    },
+    "links": {
+      "large": {
+        "size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "19px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "medium": {
+        "size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "17px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      },
+      "small": {
+        "size": {
+          "$type": "STRING",
+          "$value": "15px"
+        },
+        "mobile_size": {
+          "$type": "STRING",
+          "$value": "13px"
+        },
+        "font_weight": {
+          "$type": "STRING",
+          "$value": "400"
+        },
+        "line_height": {
+          "$type": "STRING",
+          "$value": "1.5"
+        },
+        "letter_spacing": {
+          "$type": "STRING",
+          "$value": "0"
+        }
+      }
+    }
+  },
+  "type_face": {
+    "font_family": {
+      "font_family": {
+        "$type": "STRING",
+        "$value": "\"Pretendard GOV\""
+      }
+    },
+    "font_weight": {
+      "regular": {
+        "$type": "STRING",
+        "$value": "400"
+      },
+      "bold": {
+        "$type": "STRING",
+        "$value": "700"
+      }
+    }
+  }
+}
