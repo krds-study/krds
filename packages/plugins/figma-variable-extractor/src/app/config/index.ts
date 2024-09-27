@@ -17,7 +17,7 @@ export const config = {
   owner: "krds-study",
   repo: "krds",
   dir: "packages/design-tokens/src",
-  branch: "figma-variable-extractor",
+  branch: "main",
   commitMsg:
     "feat(design-tokens): sync design tokens with latest Figma updates",
   prTitle: "update design tokens from figma plugin",
