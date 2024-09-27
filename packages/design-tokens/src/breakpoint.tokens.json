@@ -1,0 +1,14 @@
+{
+  "pc": {
+    "$type": "STRING",
+    "$value": "1024px"
+  },
+  "tablet": {
+    "$type": "STRING",
+    "$value": "600px"
+  },
+  "mobile": {
+    "$type": "STRING",
+    "$value": "360px"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "1": {
+    "$type": "STRING",
+    "$value": "2px"
+  },
+  "2": {
+    "$type": "STRING",
+    "$value": "4px"
+  },
+  "3": {
+    "$type": "STRING",
+    "$value": "8px"
+  },
+  "4": {
+    "$type": "STRING",
+    "$value": "12px"
+  },
+  "5": {
+    "$type": "STRING",
+    "$value": "16px"
+  },
+  "6": {
+    "$type": "STRING",
+    "$value": "20px"
+  },
+  "7": {
+    "$type": "STRING",
+    "$value": "24px"
+  },
+  "8": {
+    "$type": "STRING",
+    "$value": "32px"
+  },
+  "9": {
+    "$type": "STRING",
+    "$value": "40px"
+  },
+  "10": {
+    "$type": "STRING",
+    "$value": "48px"
+  }
+}
