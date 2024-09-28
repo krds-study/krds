@@ -110,23 +110,23 @@ const radius = convertJsonToToken(shape.corner_radius);
 const space = convertJsonToToken(spacing);
 
 const textStyles = objectEntries(typography.type_scale).reduce(
-  (acc1, [style, value]) => {
+  (acc, [style, value]) => {
     objectEntries(value).forEach(([size, value]) => {
       const name = `${style}_${size}`;
       const props = objectEntries(value).reduce(
-        (acc, [key, value]) => {
+        (stypeProps, [key, value]) => {
           if (key === "size") {
-            acc["fontSize"] = value.$value;
+            stypeProps["fontSize"] = value.$value;
           } else {
-            acc[snakeToCamelCase(key)] = value.$value;
+            stypeProps[snakeToCamelCase(key)] = value.$value;
           }
-          return acc;
+          return stypeProps;
         },
         {} as Record<string, any>,
       );
-      acc1[name] = { value: props };
+      acc[name] = { value: props };
     });
-    return acc1;
+    return acc;
   },
   {} as TextStyles,
 );
