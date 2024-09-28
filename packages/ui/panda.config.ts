@@ -1,15 +1,39 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineTextStyles } from "@pandacss/dev";
 
 import { buttonRecipe } from "./src/components/Button/style";
+import { designTokens } from "./transformToken";
 
 export default defineConfig({
   preflight: true,
-  presets: ["@pandacss/dev/presets"],
+  presets: ["@pandacss/preset-base"],
+  conditions: {
+    light: "[data-color-mode=light] &",
+    dark: "[data-color-mode=dark] &",
+  },
+  eject: true,
   include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
-  watch: true,
+  strictTokens: true,
+  minify: true,
+  utilities: {
+    color: {
+      values: "colors",
+    },
+  },
   theme: {
     extend: {
+      textStyles: defineTextStyles(designTokens.textStyles),
+      tokens: {
+        radii: designTokens.radius,
+      },
+      semanticTokens: {
+        colors: {
+          ...designTokens.palette,
+          ...designTokens.SEMANTIC_KEY_COLOR,
+          ...designTokens.SEMANTIC_POINT_COLOR,
+          ...designTokens.SEMANTIC_SYSTEM_COLOR,
+        },
+      },
       recipes: {
         button: buttonRecipe,
       },
