@@ -1,0 +1,34 @@
+{
+  "mobile": {
+    "m-title-24-b": {
+      "font-size": {
+        "$type": "STRING",
+        "$value": "24px"
+      },
+      "font-weight": {
+        "$type": "STRING",
+        "$value": "bold"
+      },
+      "line-hieght": {
+        "$type": "STRING",
+        "$value": "130%"
+      }
+    }
+  },
+  "web": {
+    "w-title-48-b": {
+      "font-size": {
+        "$type": "STRING",
+        "$value": "48px"
+      },
+      "font-weight": {
+        "$type": "STRING",
+        "$value": "bold"
+      },
+      "line-height": {
+        "$type": "STRING",
+        "$value": "130%"
+      }
+    }
+  }
+}

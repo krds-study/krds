@@ -1,42 +1,42 @@
 {
-  "1": {
-    "$type": "STRING",
-    "$value": "2px"
+  "spacing-none": {
+    "$type": "FLOAT",
+    "$value": 0
   },
-  "2": {
-    "$type": "STRING",
-    "$value": "4px"
+  "spacing-xxxs": {
+    "$type": "FLOAT",
+    "$value": 2
   },
-  "3": {
-    "$type": "STRING",
-    "$value": "8px"
+  "spacing-xxs": {
+    "$type": "FLOAT",
+    "$value": 4
   },
-  "4": {
-    "$type": "STRING",
-    "$value": "12px"
+  "spacing-ss": {
+    "$type": "FLOAT",
+    "$value": 8
   },
-  "5": {
-    "$type": "STRING",
-    "$value": "16px"
+  "spacing-sm": {
+    "$type": "FLOAT",
+    "$value": 12
   },
-  "6": {
-    "$type": "STRING",
-    "$value": "20px"
+  "spacing-m": {
+    "$type": "FLOAT",
+    "$value": 16
   },
-  "7": {
-    "$type": "STRING",
-    "$value": "24px"
+  "spacing-md": {
+    "$type": "FLOAT",
+    "$value": 24
   },
-  "8": {
-    "$type": "STRING",
-    "$value": "32px"
+  "spacing-lg": {
+    "$type": "FLOAT",
+    "$value": 32
   },
-  "9": {
-    "$type": "STRING",
-    "$value": "40px"
+  "spacing-xl": {
+    "$type": "FLOAT",
+    "$value": 64
   },
-  "10": {
-    "$type": "STRING",
-    "$value": "48px"
+  "spacing-xxl": {
+    "$type": "FLOAT",
+    "$value": 128
   }
 }

@@ -1,0 +1,22 @@
+{
+  "layout": {
+    "$type": "FLOAT",
+    "$value": 375
+  },
+  "container size": {
+    "$type": "FLOAT",
+    "$value": 327
+  },
+  "columns": {
+    "$type": "FLOAT",
+    "$value": 6
+  },
+  "margin": {
+    "$type": "FLOAT",
+    "$value": 16
+  },
+  "gutter": {
+    "$type": "FLOAT",
+    "$value": 16
+  }
+}
