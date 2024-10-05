@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
 const path = require("path");

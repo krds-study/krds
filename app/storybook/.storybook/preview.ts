@@ -1,6 +1,6 @@
-import type { Preview } from "@storybook/react"
-import "../index.css"
-import "@krds-prac/styled-system/styles.css"
+import type { Preview } from "@storybook/react";
+import "../index.css";
+import "@krds-prac/styled-system/styles.css";
 
 const preview: Preview = {
   parameters: {
@@ -12,6 +12,6 @@ const preview: Preview = {
     },
     layout: "centered",
   },
-}
+};
 
-export default preview
+export default preview;

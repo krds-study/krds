@@ -22,7 +22,7 @@ export function UseUploadTokens() {
         },
         pluginId: "*",
       },
-      "*"
+      "*",
     );
   };
 
