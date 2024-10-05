@@ -18,14 +18,14 @@ const Extract: React.FC = () => {
     window.onmessage = async (
       event: MessageEvent<
         PluginMessage<ExtractTokenAction, ExtractTokenActionPayload>
-      >
+      >,
     ) => {
       const { type, payload } = event.data.pluginMessage;
       if (type === "extractTokens" && payload) {
         upload(acessToken, payload);
       }
     };
-  }, [acessToken]);
+  }, [acessToken, upload]);
 
   return (
     <div className="flex flex-col gap-2 mx-3 my-2">
@@ -38,7 +38,7 @@ const Extract: React.FC = () => {
       <Input
         id="token"
         value={acessToken}
-        onChange={(e) => setAcessToken(e.target.value)}
+        onChange={e => setAcessToken(e.target.value)}
       />
       <Button
         disabled={isUplaoding || !acessToken}

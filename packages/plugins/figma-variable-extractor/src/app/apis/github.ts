@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export async function uploadTokens(
   accessToken: string,
-  designTokenFiles: TokenFile[]
+  designTokenFiles: TokenFile[],
 ) {
   const { owner, repo, dir, branch, commitMsg, prTitle, prBody } = config;
   const newBranch = `design-token-${uuidv4()}`;
@@ -34,7 +34,7 @@ export async function uploadTokens(
     const baseTreeSha = baseTreeData.tree.sha;
 
     const tree = await Promise.all(
-      designTokenFiles.map(async (file) => {
+      designTokenFiles.map(async file => {
         const filePath = `${dir}/${file.fileName}`;
         const jsonContent = JSON.stringify(file.body, null, 2);
 
@@ -50,7 +50,7 @@ export async function uploadTokens(
           type: "blob" as const,
           sha: blobData.sha,
         };
-      })
+      }),
     );
 
     const { data: newTree } = await octokit.git.createTree({

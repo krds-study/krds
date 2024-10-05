@@ -21,7 +21,7 @@ async function extractTokens(): Promise<TokenFile[]> {
     files.push(await processCollection(collection));
   }
 
-  files.forEach((file) => {
+  files.forEach(file => {
     file.body = convertToNested(file.body);
   });
 
@@ -29,7 +29,7 @@ async function extractTokens(): Promise<TokenFile[]> {
 }
 
 async function processCollection(
-  collection: VariableCollection
+  collection: VariableCollection,
 ): Promise<TokenFile> {
   const file: TokenFile = {
     fileName: `${collection.name}.tokens.json`,
@@ -64,7 +64,7 @@ async function processCollection(
 
 async function createToken(
   resolvedType: VariableResolvedDataType,
-  value: VariableValue
+  value: VariableValue,
 ): Promise<TokenValue | null> {
   switch (resolvedType) {
     case "BOOLEAN":
