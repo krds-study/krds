@@ -1,8 +1,14 @@
 {
   "name": "@krds-prac/ui",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.2.17",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
   "types": "./dist/types/index.d.ts",
@@ -12,24 +18,35 @@
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.mjs"
     },
-    "./css": "./dist/styles.css"
+    "./css": "./dist/styles.css",
+    "./preset": {
+      "require": "./dist/cjs/preset.js",
+      "import": "./dist/esm/preset.mjs"
+    }
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0 --fix",
     "generate:component": "turbo gen react-component",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "build": "pnpm panda codegen --clean && pnpm panda cssgen -o ../styled-system/generated/styles.css && rollup -c",
-    "start-dev": "concurrently \"rollup -c -w\" \"pnpm panda --watch\""
+    "panda:generate": "pnpm panda codegen && pnpm panda cssgen -o dist/styles.css",
+    "build:rollup": "rollup -c",
+    "build": "pnpm run build:rollup && pnpm run panda:generate",
+    "dev": "concurrently \"pnpm run build:rollup -w\" \"pnpm panda --watch\""
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/plugin-transform-runtime": "^7.25.4",
     "@babel/preset-env": "^7.25.4",
+    "@krds-prac/eslint-config": "workspace:*",
+    "@krds-prac/prettier-config": "workspace:*",
+    "@krds-prac/typescript-config": "workspace:*",
     "@pandacss/dev": "^0.45.2",
+    "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
@@ -45,10 +62,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.25.6",
-    "@krds-prac/eslint-config": "workspace:*",
-    "@krds-prac/prettier-config": "workspace:*",
     "@krds-prac/styled-system": "workspace:*",
-    "@krds-prac/typescript-config": "workspace:*",
     "react": "^18.2.0"
   }
 }
