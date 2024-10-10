@@ -18,7 +18,7 @@ const pkg = JSON.parse(
 
 export default defineConfig([
   {
-    input: "src/index.ts",
+    input: ["src/index.ts"],
     output: [
       {
         format: "cjs",
@@ -27,6 +27,7 @@ export default defineConfig([
         preserveModulesRoot: "src",
         sourcemap: true,
         entryFileNames: "[name].js",
+        exports: "named",
       },
       {
         format: "esm",
@@ -35,22 +36,30 @@ export default defineConfig([
         preserveModulesRoot: "src",
         sourcemap: true,
         entryFileNames: "[name].mjs",
+        exports: "named",
       },
     ],
-    external: [/@babel\/runtime/],
+    external: [
+      /@babel\/runtime/,
+      /^@krds-prac\/styled-system/,
+      "react/jsx-runtime",
+    ],
     plugins: [
       peerDepsExternal(),
-      resolve(),
-      commonjs(),
+      commonjs({ include: /\**node_modules\**/ }),
       nodeResolve({ extensions: [...DEFAULT_EXTENSIONS, ".ts", ".tsx"] }),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        include: ["src/components/**/*"],
+      }),
       babel({
         babelHelpers: "runtime",
         exclude: "node_modules/**",
+        include: ["src/**/*"],
         presets: ["@babel/preset-env"],
         plugins: ["@babel/plugin-transform-runtime"],
       }),
       visualizer({ filename: "stats.html" }),
+      resolve(),
     ],
   },
   {
@@ -58,4 +67,16 @@ export default defineConfig([
     output: [{ file: "dist/types/index.d.ts", format: "es" }],
     plugins: [dts()],
   },
+  // {
+  //   input: "src/preset.ts",
+  //   output: [
+  //     { file: "dist/preset/index.js", format: "cjs" },
+  //     {
+  //       file: "dist/preset/index.mjs",
+  //       format: "es",
+  //     },
+  //   ],
+  //   external: [/@babel\/runtime/, /node_modules/, /^@krds-prac\/styled-system/],
+  //   plugins: [dts(), json()],
+  // },
 ]);
