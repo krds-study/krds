@@ -9,7 +9,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "ui": "pnpm --filter @krds-prac/ui",
-    "storybook": "pnpm --filter @krds-prac/storybook"
+    "storybook": "pnpm --filter @krds-prac/storybook",
+    "styled-system": "pnpm --filter @krds-prac/styled-system"
   },
   "devDependencies": {
     "husky": "^9.1.5",

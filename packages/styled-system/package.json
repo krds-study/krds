@@ -1,5 +1,9 @@
 {
   "name": "@krds-prac/styled-system",
+  "version": "0.0.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "./css": {
       "types": "./generated/css/index.d.ts",
