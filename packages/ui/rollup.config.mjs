@@ -1,4 +1,5 @@
 import { DEFAULT_EXTENSIONS } from "@babel/core";
+import alias from "@rollup/plugin-alias";
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
@@ -6,7 +7,7 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 import { readFileSync } from "fs";
 import path from "path";
 import { defineConfig } from "rollup";
-import dts from "rollup-plugin-dts";
+import nodeExternals from "rollup-plugin-node-externals";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -16,9 +17,14 @@ const pkg = JSON.parse(
   readFileSync(fileURLToPath(new URL("./package.json", import.meta.url))),
 );
 
+const rootDir = fileURLToPath(new URL(".", import.meta.url));
+
+/**
+ * @type {import('rollup').PluginImpl}
+ */
 export default defineConfig([
   {
-    input: "src/index.ts",
+    input: ["src/index.ts"],
     output: [
       {
         format: "cjs",
@@ -37,25 +43,34 @@ export default defineConfig([
         entryFileNames: "[name].mjs",
       },
     ],
-    external: [/@babel\/runtime/],
+    external: [],
     plugins: [
       peerDepsExternal(),
       resolve(),
       commonjs(),
+      nodeExternals({
+        deps: false,
+        peerDeps: true,
+        packagePath: "./package.json",
+      }),
       nodeResolve({ extensions: [...DEFAULT_EXTENSIONS, ".ts", ".tsx"] }),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+      }),
+      alias({
+        entries: [
+          {
+            find: "@styled-system",
+            replacement: path.join(rootDir, "./styled-system"),
+          },
+        ],
+      }),
       babel({
-        babelHelpers: "runtime",
+        babelHelpers: "bundled",
         exclude: "node_modules/**",
-        presets: ["@babel/preset-env"],
-        plugins: ["@babel/plugin-transform-runtime"],
+        extensions: DEFAULT_EXTENSIONS,
       }),
       visualizer({ filename: "stats.html" }),
     ],
-  },
-  {
-    input: "src/index.ts",
-    output: [{ file: "dist/types/index.d.ts", format: "es" }],
-    plugins: [dts()],
   },
 ]);
