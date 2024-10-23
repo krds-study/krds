@@ -1,0 +1,15 @@
+{
+  "exends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react",
+    "paths": {
+      "@styled-system/*": ["./styled-system/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@krds-prac/preset",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "tsc": "tsc",
+    "codegen": "pnpm panda codegen",
+    "cssgen": "pnpm panda cssgen",
+    "pub": "pnpm publish --no-git-checks"
+  },
+  "devDependencies": {
+    "@krds-prac/eslint-config": "workspace:*",
+    "@krds-prac/prettier-config": "workspace:*",
+    "@krds-prac/typescript-config": "workspace:*",
+    "@pandacss/dev": "^0.45.2",
+    "tsup": "^8.3.0"
+  },
+  "tsup": {
+    "entry": [
+      "./src/preset/index.ts"
+    ],
+    "clean": true,
+    "dts": true,
+    "sourcemap": true,
+    "format": [
+      "esm",
+      "cjs"
+    ]
+  }
+}
