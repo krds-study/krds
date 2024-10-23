@@ -1,6 +1,5 @@
+import { customPreset } from "@krds-prac/preset";
 import { defineConfig } from "@pandacss/dev";
-
-import { customPreset } from "../preset/dist";
 
 export default defineConfig({
   preflight: true,
