@@ -3,5 +3,6 @@ module.exports = {
   extends: [
     "@krds-prac/eslint-config/library.js",
     "@krds-prac/eslint-config/react-internal.js",
+    "plugin:storybook/recommended",
   ],
 };
