@@ -1,8 +1,20 @@
-import { styled } from "@styled-system/jsx";
 import { button } from "@styled-system/recipes";
-import type { ComponentProps } from "@styled-system/types";
+import type { ComponentPropsWithRef, ReactNode } from "react";
+import { forwardRef } from "react";
 
-import { Button as ButtonBase } from "./Button";
+export interface ButtonProps extends ComponentPropsWithRef<"button"> {
+  children: ReactNode;
+  className?: string;
+}
 
-export type ButtonProps = ComponentProps<typeof Button>;
-export const Button = styled(ButtonBase, button);
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, ...props }, ref) => {
+    return (
+      <button ref={ref} className={button({})} {...props}>
+        {children}
+      </button>
+    );
+  },
+);
+
+Button.displayName = "Button";
