@@ -5,34 +5,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.mjs",
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.mjs",
-      "types": "./dist/esm/index.d.ts"
-    },
-    "./styles": "./dist/styles.css"
-  },
-  "files": [
-    "dist",
-    "package.json"
-  ],
   "scripts": {
     "lint": "eslint . --max-warnings 0 --fix",
     "prepare": "panda codegen",
     "generate:component": "turbo gen react-component",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "codegen": "pnpm panda codegen",
-    "cssgen": "pnpm panda cssgen",
-    "panda:dev": "pnpm panda --watch",
     "studio": "pnpm panda studio",
-    "pub": "pnpm codegen && pnpm cssgen && pnpm publish --no-git-checks",
-    "build:comp": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
@@ -58,6 +40,7 @@
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "axe-playwright": "^2.0.3",
     "concurrently": "^8.2.2",
     "eslint-plugin-storybook": "^0.10.1",
     "prop-types": "^15.8.1",
