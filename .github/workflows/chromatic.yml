@@ -5,7 +5,7 @@ on:
     types: [opened, reopened, synchronize]
     branches: ["main"]
     paths:
-      - app/storybook/src/**
+      - packages/ui/stories/**
 
 jobs:
   a11y-test:
@@ -50,13 +50,13 @@ jobs:
 
       - uses: pnpm/action-setup@v4
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build Storybook
-        run: pnpm turbo build
+        run: pnpm ui build-storybook
 
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: app/storybook
+          workingDir: packages/ui

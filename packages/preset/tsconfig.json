@@ -7,11 +7,8 @@
     "declaration": true,
     "declarationDir": "./build",
     "isolatedModules": false,
-    "baseUrl": ".",
-    "paths": {
-      "@styled-system/*": ["./styled-system/*"]
-    }
+    "baseUrl": "."
   },
-  "include": ["src", "styled-system"],
-  "exclude": ["node_modules", "dist", "panda.config.ts"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
