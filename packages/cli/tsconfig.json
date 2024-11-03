@@ -1,0 +1,10 @@
+{
+  "extends": "@krds-prac/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",
+    "moduleResolution": "Bundler"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

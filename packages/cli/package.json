@@ -1,0 +1,39 @@
+{
+  "name": "@krds-prac/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "release": "pnpm build && pnpm publish --no-git-checks"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "@effect/platform": "^0.69.13",
+    "@effect/schema": "^0.75.5",
+    "effect": "^3.10.8",
+    "fs-extra": "^11.2.0",
+    "pkg-dir": "^8.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@krds-prac/typescript-config": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.24",
+    "@types/yargs": "^17.0.33",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.2"
+  }
+}
