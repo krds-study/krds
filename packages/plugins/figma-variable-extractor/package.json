@@ -1,6 +1,6 @@
 {
   "name": "@krds-prac/figma-variable-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "webpack --mode=development --config webpack.config.ts --watch",
     "build": "webpack --mode=production --config webpack.config.ts",
