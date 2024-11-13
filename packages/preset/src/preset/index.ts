@@ -1,6 +1,6 @@
 import { definePreset } from "@pandacss/dev";
 
-import { recipes } from "./recipe";
+import { recipes, slotRecipes } from "./recipe";
 import { textStyles } from "./textStyles";
 import { radii, spacing } from "./token/basic";
 import { colors } from "./token/semantic";
@@ -12,6 +12,7 @@ export const customPreset = () =>
       extend: {
         textStyles,
         recipes,
+        slotRecipes,
         tokens: {
           radii,
           spacing,
