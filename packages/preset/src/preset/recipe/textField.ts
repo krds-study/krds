@@ -1,9 +1,13 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 
+/**
+ * TextField 컴포넌트의 스타일 recipe
+ * @description 텍스트 입력을 위한 복합 컴포넌트입니다. 라벨, 입력창, 카운터로 구성됩니다.
+ */
 export const textField = defineSlotRecipe({
-  className: "text-field",
-  description: "A text field style recipe",
+  className: "text-fields",
   slots: ["root", "label", "input", "counter"],
+
   base: {
     root: {
       display: "flex",
@@ -12,35 +16,45 @@ export const textField = defineSlotRecipe({
       alignItems: "flex-start",
       gap: "12px",
       borderRadius: "8px",
-      fontFamily: "Pretendard GOV",
+      color: "key.gray_90",
+      fontFamily: '"Pretendard GOV"',
       fontSize: "15px",
       fontWeight: "400",
       lineHeight: "150%",
-      fontStyle: "normal",
-      color: "var(--gray-gray-90, #1D1D1D)",
     },
     label: {
-      fontFamily: "Pretendard GOV",
+      color: "key.gray_90",
+      fontFamily: '"Pretendard GOV"',
       fontSize: "15px",
       fontWeight: "400",
       lineHeight: "150%",
-      color: "var(--gray-gray-90, #1D1D1D)",
     },
     input: {
-      display: "block",
+      display: "flex",
       width: "360px",
       height: "144px",
       padding: "16px",
       alignItems: "flex-start",
       gap: "8px",
       borderRadius: "8px",
-      border: "1px solid var(--key-gray-60, #717171)",
-      background: "var(--gray-gray-0, #FFF)",
-      fontFamily: "Pretendard GOV",
+      border: "1px solid",
+      borderColor: "key.gray_60",
+      background: "key.gray_0",
+      color: "key.gray_50",
+      fontFamily: '"Pretendard GOV"',
       fontSize: "17px",
       fontWeight: "400",
       lineHeight: "150%",
-      color: "var(--gray-gray-50, #8E8E8E)",
+      _focus: {
+        borderWidth: "2px",
+        borderColor: "key.primary_50",
+        color: "key.gray_90",
+      },
+      _disabled: {
+        borderColor: "key.gray_40",
+        background: "key.gray_30",
+        color: "key.gray_60",
+      },
     },
     counter: {
       display: "flex",
@@ -48,66 +62,42 @@ export const textField = defineSlotRecipe({
       alignItems: "flex-start",
       gap: "2px",
       alignSelf: "stretch",
-      fontFamily: "Pretendard GOV",
+      color: "key.gray_70",
+      fontFamily: '"Pretendard GOV"',
       fontSize: "15px",
       fontWeight: "400",
       lineHeight: "150%",
-      color: "var(--gray-gray-70, #555)",
-      leadingTrim: "both",
-      textEdge: "cap",
+      _leadingTrim: "both",
+      _textEdge: "cap",
     },
   },
+
   variants: {
     state: {
       default: {},
-      disabled: {
-        input: {
-          border: "1px solid var(--key-gray-40, #C6C6C6)",
-          background: "var(--key-gray-30, #D8D8D8)",
-          color: "var(--gray-gray-60, #717171)",
-        },
-        counter: {
-          display: "none",
-        },
-      },
-      view: {
-        input: {
-          border: "1px solid var(--key-gray-40, #C6C6C6)",
-          background: "var(--key-gray-30, #D8D8D8)",
-          color: "var(--gray-gray-90, #1D1D1D)",
-        },
-        counter: {
-          display: "none",
-        },
-      },
-      error: {
-        input: {
-          border: "1px solid var(--system-danger-50, #EB003B)",
-        },
-        counter: {
-          display: "none",
-        },
-      },
-      focused: {
-        input: {
-          border: "2px solid var(--key-primary-50, #246BEB)",
-          color: "var(--gray-gray-90, #1D1D1D)",
-        },
-      },
       completed: {
         input: {
           display: "-webkit-box",
-          WebkitBoxOrient: "vertical",
-          WebkitLineClamp: "5",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          color: "var(--gray-gray-90, #1D1D1D)",
+          color: "key.gray_90",
           fontFamily: "Noto Sans KR",
           fontSize: "16px",
         },
       },
+      view: {
+        input: {
+          borderColor: "key.gray_40",
+          background: "key.gray_30",
+          color: "key.gray_90",
+        },
+      },
+      error: {
+        input: {
+          borderColor: "system.danger_50",
+        },
+      },
     },
   },
+
   defaultVariants: {
     state: "default",
   },
