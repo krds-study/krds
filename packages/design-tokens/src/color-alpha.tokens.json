@@ -1,0 +1,92 @@
+{
+  "alpha": {
+    "white": {
+      "5": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff0d"
+        }
+      },
+      "10": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff1a"
+        }
+      },
+      "20": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff33"
+        }
+      },
+      "40": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff66"
+        }
+      },
+      "60": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff99"
+        }
+      },
+      "80": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffffcc"
+        }
+      },
+      "white": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#ffffff"
+        }
+      }
+    },
+    "black": {
+      "5": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#0000000d"
+        }
+      },
+      "10": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#0000001a"
+        }
+      },
+      "20": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#00000033"
+        }
+      },
+      "40": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#00000066"
+        }
+      },
+      "60": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#00000099"
+        }
+      },
+      "80": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#000000cc"
+        }
+      },
+      "black": {
+        "Mode 1": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      }
+    }
+  }
+}
